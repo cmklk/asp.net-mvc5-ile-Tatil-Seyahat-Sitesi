@@ -1,0 +1,39 @@
+﻿@model seyahatSitesiMVC.Models.siniflar.blog
+
+@{
+    ViewBag.Title = "BlogVeriGetir";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>VERİLER</h2>
+
+@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readOnly= "ReadOnly"})
+    <br />
+
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama,11,1, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-warning">Blog Güncelle</button>
+
+}
+
+
+

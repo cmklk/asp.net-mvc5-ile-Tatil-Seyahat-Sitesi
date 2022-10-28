@@ -1,0 +1,34 @@
+﻿@using seyahatSitesiMVC.Models.siniflar
+@model List<blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2 class="my-5">BLOG LİSTESİ</h2>
+  <table class="table table-bordered table-hover">
+      <thead>
+          <tr>
+              <th scope="col">ID</th>
+              <th scope="col">BAŞLIK</th>
+              <th scope="col">GÜNCELLE</th>
+              <th scope="col">SİL</th>
+              <th scope="col">DETAYLAR</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          @foreach(var x in Model)
+          {
+              <tr>
+                  <td>@x.ID</td>
+                  <td>@x.Baslik</td>
+                  <td><a href="/Admin/BlogVeriGetir/@x.ID" class="btn btn-warning text-white">GÜNCELLE</a></td>
+                  <td><a href="/Admin/BlogSil/@x.ID" class="btn btn-danger">SİL</a></td>
+                  <td><a href="" class="btn btn-dark">DETAYLAR</a></td>
+              </tr>
+          }
+      </tbody>
+  </table>
+
+<a href="/Admin/YeniBlog/" class="btn btn-primary btn-lg">Yeni Blog</a>

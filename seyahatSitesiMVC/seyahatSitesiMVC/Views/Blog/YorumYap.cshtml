@@ -1,0 +1,12 @@
+﻿@model seyahatSitesiMVC.Models.siniflar.blog
+
+<div class="content-form">
+    <h3>BİR YORUM YAPIN</h3>
+    <form method="post">
+        <input type="text" placeholder="ID" name="blogId" value="@ViewBag.deger"  disabled required />
+        <input type="text" placeholder="kullaniciadi" name="KullaniciAdi" required />
+        <input type="text" placeholder="mail" name="Mail" required />
+        <textarea placeholder="yorum" name="Yorum"></textarea>
+        <input type="submit" value="SEND" />
+    </form>
+</div>

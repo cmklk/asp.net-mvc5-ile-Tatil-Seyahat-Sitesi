@@ -1,0 +1,24 @@
+﻿@using seyahatSitesiMVC.Models.siniflar; <!--sinif klasörüne ulaş-->
+@model List<hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+
+
+            @foreach (var x in Model)
+            {
+                <img src="@x.FotoUrl" alt="" width="1000px" />
+                <p>@x.Aciklama</p>
+            }
+
+        </div>
+    </div>
+</div>
+

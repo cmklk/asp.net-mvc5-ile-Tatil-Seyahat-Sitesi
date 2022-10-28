@@ -1,0 +1,28 @@
+﻿@model seyahatSitesiMVC.Models.siniflar.blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2 class="my-5">YENİ BLOG EKLEME SAYFASI</h2>
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">EKLE</button>
+
+</form>
